@@ -1,10 +1,16 @@
 /*jslint white:true */
 /*global
+	define,
 	console
 */
-function Three(){
+define(function(){
 	'use strict';
-	this.sayHello = function sayHello(name){
-		console.log( name + ', hi there!');
-	};
-}
+	
+	function Three(){		
+		this.sayHello = function sayHello(name){
+			console.log( name + ', hi there!');
+		};
+	}	
+
+	return Three;
+});

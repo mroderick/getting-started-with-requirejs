@@ -1,8 +1,14 @@
 /*jslint white:true */
 /*global
+	define,
 	console
 */
-function one(){
+define(function(){
 	'use strict';
-	console.log( String().sup() + '?' );
-}
+	
+	function one(){
+		console.log( String().sup() + '?' );
+	}
+
+	return one;
+});

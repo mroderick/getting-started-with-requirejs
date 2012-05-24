@@ -1,9 +1,16 @@
 /*jslint white:true */
-/*global
+/*global,
+	define,
 	console
 */
-var two = two || {};
-two.sayHello = function sayHello(name){
+define(function(){
 	'use strict';
-	console.log( 'hello ' + name );
-};
+	
+	var two = {
+		sayHello : function sayHello(name){		
+			console.log( 'hello ' + name );
+		}
+	};
+	
+	return two;
+});

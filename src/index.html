@@ -7,24 +7,20 @@
 		<link rel="stylesheet" href="/css/second.css" media="screen, projection" />
 		<link rel="stylesheet" href="/css/third.css" media="screen, projection" />
 		<script src="/js/jquery-1.7.2.js"></script>
-		<script src="/js/one.js"></script>
-		<script src="/js/two.js"></script>
-		<script src="/js/three.js"></script>
+		<script src="/js/require.js"></script>
 		<script>
-			$(document).ready(function(){
-				// function
-				one();
-				
-				// module
-				two.sayHello('CopenhagenJS');
-				
-				// constructor
-				var three = new Three();
-				three.sayHello('CopenhagenJS');				
-
-				console.log( 'typeof one: ', typeof one );
-				console.log( 'typeof two: ', typeof two );
-				console.log( 'typeof Three: ', typeof Three );
+			require(['one', 'two', 'three'], function(){
+				$(document).ready(function(){
+					// function
+					one();
+					
+					// module
+					two.sayHello('CopenhagenJS');
+					
+					// constructor
+					var three = new Three();
+					three.sayHello('CopenhagenJS');
+				});
 			});
 		</script>
 	</head>

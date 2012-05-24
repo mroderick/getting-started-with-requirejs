@@ -7,6 +7,11 @@
 		<link rel="stylesheet" href="/css/second.css" media="screen, projection" />
 		<link rel="stylesheet" href="/css/third.css" media="screen, projection" />
 		<script src="/js/jquery-1.7.2.js"></script>
+		<script>
+			var require = {
+				baseUrl : '/js'
+			}
+		</script>
 		<script src="/js/require.js"></script>
 		<script>
 			require(['one', 'two', 'three'], function(){
@@ -20,6 +25,10 @@
 					// constructor
 					var three = new Three();
 					three.sayHello('CopenhagenJS');
+
+					console.log( 'typeof one: ', typeof one );
+					console.log( 'typeof two: ', typeof two );
+					console.log( 'typeof Three: ', typeof Three );
 				});
 			});
 		</script>

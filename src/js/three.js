@@ -1,3 +1,5 @@
-function three(){
-	console.log('three');
+function Three(){
+	this.sayHello = function sayHello(name){
+		console.log( name + ', hi there!');
+	}
 }

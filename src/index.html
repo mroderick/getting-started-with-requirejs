@@ -11,9 +11,15 @@
 		<script src="/js/three.js"></script>
 		<script>
 			$(document).ready(function(){
+				// function
 				one();
-				two();
-				three();
+				
+				// module
+				two.sayHello('CopenhagenJS');
+				
+				// constructor
+				var three = new Three();
+				three.sayHello('CopenhagenJS');				
 			})
 		</script>
 	</head>

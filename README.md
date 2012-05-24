@@ -26,12 +26,43 @@ We have also added r.js to the root of the project.
 
 ## 2-define-modules
 
+In this branch we have modified the three javascript files to use the `define` function.
+
+The script in index.html has been updated to use the `require` function.
+
+In the console we can see that the names `one`, `two` and `Three` are defined.
+
 ## 3-define-dependencies
+
+In this branch we introduce a fourth JS file, that is dependendt on the first three files.
+
+In the console we can see that the names `one`, `two` and `Three` have been removed from the local scope as well.
 
 ## 4-define-main.js
 
+In this branch we replace the inline script from index.html with a main.js, which is put into the data-main attribute of the RequireJS script tag.
+
 ## 5-css
+
+In this branch we create a main-screen.css to prepare for concatenating css files.
 
 ## 6-optimise
 
+In this branch we create build.js (our build recipe).
+
+To run the build from the root of the project:
+
+	node r.js -o build.js
+
+Observe that it creates a build folder, that contains optimised versions of both JS and CSS files.
+
+You can serve the build like so:
+
+	cd build
+	python -m SimpleHTTPServer 8001
+
+And then point your browser to http://localhost:8001 ... here you should be able to see that we now have a lot fewer requests for both CSS and JavaScript files, and that the JavaScript files have been minified. Note that index.html has not been changed.
+
 ## 7-dynamic-loading-still
+
+In this branch we show that it's possible to both have a merged and optimised main.js and still use dynamic loading when needed. You CAN have your cake and eat it too.

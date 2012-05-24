@@ -14,17 +14,9 @@
 		</script>
 		<script src="/js/require.js"></script>
 		<script>
-			require(['one', 'two', 'three'], function( one, two, Three ){
+			require(['four'], function( four ){
 				$(document).ready(function(){
-					// function
-					one();
-					
-					// module
-					two.sayHello('CopenhagenJS');
-					
-					// constructor
-					var three = new Three();
-					three.sayHello('CopenhagenJS');
+					four( 'CopenhagenJS' );
 
 					console.log( 'typeof one: ', typeof one );
 					console.log( 'typeof two: ', typeof two );

@@ -11,6 +11,12 @@
 			}
 		</script>
 		<script data-main="main" src="/js/require.js"></script>
+		<script>
+			require(['two', 'five'], function( two, five ){
+				two.sayHello('Malmö');
+				five('Malmö');
+			});
+		</script>
 	</head>
 	<body>
 		<div class="first">First</div>

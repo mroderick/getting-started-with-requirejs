@@ -12,18 +12,7 @@
 				baseUrl : '/js'
 			}
 		</script>
-		<script src="/js/require.js"></script>
-		<script>
-			require(['four'], function( four ){
-				$(document).ready(function(){
-					four( 'CopenhagenJS' );
-
-					console.log( 'typeof one: ', typeof one );
-					console.log( 'typeof two: ', typeof two );
-					console.log( 'typeof Three: ', typeof Three );
-				});
-			});
-		</script>
+		<script data-main="main" src="/js/require.js"></script>
 	</head>
 	<body>
 		<div class="first">First</div>
